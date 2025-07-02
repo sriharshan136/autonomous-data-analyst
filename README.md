@@ -1,12 +1,41 @@
 # Autonomous Data Analyst 🤖📊
 
-This project is an AI-powered data analyst that uses LangChain agents to analyze data from CSV files. It can provide insights, generate summaries, and create visualizations based on natural language questions.
+This project is an AI-powered data analyst that uses a LangChain agent to analyze data from CSV files. It can understand natural language questions, perform complex analysis using a variety of tools, and generate insights on the fly.
 
 ## Features
 
-- **Natural Language Queries**: Ask questions about your data in plain English.
-- **Insight Generation**: Get automated summaries and key insights.
-- **Automated Visualizations**: Ask the agent to generate Python code for Matplotlib plots.
+- **Interactive Chat**: Ask questions and guide the analysis in a conversational way.
+- **Multi-Tool Agent**: The agent has access to a variety of tools, including:
+  - A powerful **Pandas DataFrame** tool for general data queries.
+  - A custom **Outlier Detector** to find anomalies in the data.
+  - A **Report Saver** to write findings to a text file.
+- **Modular & Organized**: The project is structured with separate directories for tools and agent logic, making it easy to extend.
+
+---
+
+## Project Structure
+
+The project is organized into a modular structure for better maintainability:
+
+```
+autonomous-data-analyst/
+├── input/
+│   └── sales_data.csv
+├── reports/
+│   └── (created by the agent)
+├── tools/
+│   ├── __init__.py
+│   └── custom_tools.py
+├── agent/
+│   ├── __init__.py
+│   └── agent_creator.py
+├── .gitignore
+├── .env
+├── main.py
+└── requirements.txt
+```
+
+---
 
 ## Setup & Installation
 
@@ -14,7 +43,7 @@ This project is an AI-powered data analyst that uses LangChain agents to analyze
 
     ```bash
     git clone <your-repo-url>
-    cd <your-repo-name>
+    cd autonomous-data-analyst
     ```
 
 2.  **Create and activate a virtual environment:**
@@ -36,12 +65,25 @@ This project is an AI-powered data analyst that uses LangChain agents to analyze
     HUGGINGFACEHUB_API_TOKEN='your_hf_token_here'
     ```
 
+---
+
 ## How to Run
 
-Run the main application from your terminal:
+Run the main application from your terminal. The script will load the data and initialize the agent.
 
 ```bash
 python main.py
 ```
 
-Then, follow the on-screen prompts to ask questions about the `sales_data.csv` file.
+Once the `🤖 AI Data Analyst is ready...` message appears, you can start asking questions.
+
+### Example Queries
+
+Here are a few things you can ask the agent:
+
+- `What is the total sales for each region?`
+- `Detect outliers in the 'quantity' column.`
+- `Summarize the data and then save the report.`
+- `What is the average unit_price for Laptops?`
+
+Type `exit` to end the session.
