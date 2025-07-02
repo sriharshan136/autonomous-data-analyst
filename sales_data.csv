@@ -1,0 +1,17 @@
+product,region,sales,quantity,unit_price
+Laptop,North,12000,10,1200
+Keyboard,North,1500,30,50
+Mouse,North,500,50,10
+Laptop,South,15000,12,1250
+Keyboard,South,1800,40,45
+Mouse,South,600,60,10
+Laptop,East,10500,8,1312.5
+Keyboard,East,1300,25,52
+Mouse,East,450,45,10
+Laptop,West,18000,15,1200
+Keyboard,West,2000,45,44.44
+Mouse,West,700,70,10
+Tablet,North,4000,20,200
+Tablet,South,5000,25,200
+Tablet,East,3500,18,194.44
+Tablet,West,6000,30,200
